@@ -60,11 +60,12 @@
             </div>
             <div class="row bg-light">
              <div class="mx-auto">
-              <h1 class="digit-twod">07</h1>
-              <p style="color: #1aacac;">Updated: 25-10-2023 4:30:00PM</p>                             
+              <h1 class="digit-twod" id="live_2d">07</h1>
+              <p style="color: #1aacac;">Updated: <span id="live_updated_time">10-0-2023 4:30:00PM</span></p>                             
              </div>                         
             </div>    
-            <div class="row" style="margin-bottom: 60px;">
+            <div class="container-fluid" id="result"></div>
+            <!-- <div class="row" style="margin-bottom: 60px;">
               <div class="card digit-card">
                <p class="text-center">12:00 AM</p>
                <div class="multi-text">                
@@ -116,7 +117,7 @@
                 </tr>
                </table>
               </div>
-             </div>  
+             </div>   -->
              <div class="row mt-3 fixed-footer">
               <div class="col mx-auto">
                <button type="button" class="btn custom-btn" data-toggle="modal" data-target="#playtwod">ထိုးမည်</a>
@@ -174,5 +175,68 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      // Define the URL you want to fetch
+      const url = 'https://api.thaistock2d.com/live';
+
+      // Make the fetch request
+      fetch(url)
+          .then(response => {
+              if (!response.ok) {
+                  throw new Error('Network response was not ok');
+              }
+              return response.json(); // Parse the response body as JSON
+          })
+          .then(data => {
+              // Handle the data from the response
+              console.log(data);
+              // live 2d winner for today
+              $("#live_2d").text(data.live.twod)
+
+              // updated time format code start
+              const updatedTime = new Date(data.live.time);
+              const day = updatedTime.getDate().toString().padStart(2, '0');
+              const month = (updatedTime.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
+              const year = updatedTime.getFullYear();
+              let hours = updatedTime.getHours();
+              const minutes = updatedTime.getMinutes();
+              const ampm = hours >= 12 ? 'PM' : 'AM';
+              hours = hours % 12;
+              hours = hours ? hours : 12; // the hour '0' should be '12'
+              updatedTimeFormat = `${day}-${month}-${year} ${hours}:${minutes.toString().padStart(2, '0')}:${updatedTime.getSeconds().toString().padStart(2, '0')}${ampm}`
+              $("#live_updated_time").text(updatedTimeFormat)
+              // updated time format code end
+
+              // result looping
+              let newHTML = ''
+              data.result.forEach(r => {
+                newHTML += `
+                    <div class="card digit-card mb-1"> 
+                      <p class="text-center">${r.open_time}</p>
+                      <div class="multi-text">                
+                        <div class="">
+                          <p>Set</p>
+                          <p>${r.set}</p>
+                        </div>
+                        <div class="">
+                          <p>Value</p>
+                          <p>${r.value}</p>
+                        </div>
+                        <div class="">
+                          <p>2D</p>
+                          <p>${r.twod}</p>
+                        </div>
+                      </div>             
+                  </div>
+                `;
+              })
+              $('#result').html(newHTML);
+              
+          })
+          .catch(error => {
+              // Handle errors
+              console.error('Error:', error);
+          });
+  </script>
   </body>
 </html>
