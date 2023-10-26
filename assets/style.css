@@ -330,3 +330,45 @@ hr.my-custom-line {
     background-color: #1aacac; 
 }
 /* END WINNER PAGE STYLES */
+
+/* START LOGIN STYLES */
+.login-card {
+    height: auto;
+    margin-top: 150px;
+    border-radius: 15px !important;
+    padding: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+}
+.login-card h5 {
+    color: #1aacac;
+    font-size: 25px;
+}
+.login-card label {
+    color: #1aacac;
+}
+.login-btn {
+    width: 150px;
+    height: 40px;
+    border-radius: 25px !important;
+    background: #1aacac;
+    color: white;   
+}
+.login-btn:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* END LOGIN STYLES */
+
+/* START REGISTER STYLES */
+.register-card {
+    height: auto;
+    margin-top: 30px;
+    border-radius: 15px !important;
+    padding: 0px 15px 0px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;    
+}
+.register-card h5{
+    color: #1aacac;
+}
+/* END REGISTER STYLES */
