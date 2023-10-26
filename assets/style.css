@@ -225,6 +225,13 @@ hr.my-custom-line {
  text-decoration: none;
  color: white;
 }
+.footer-icon{
+    font-size: 25px;
+    margin-bottom: 5px;
+}
+.footer-text{
+    font-size: 12px;
+}
 
 
 /* END TOPUP STYLES */
