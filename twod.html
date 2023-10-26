@@ -176,67 +176,65 @@
       crossorigin="anonymous"
     ></script>
     <script>
-      // Define the URL you want to fetch
-      const url = 'https://api.thaistock2d.com/live';
+        (function() {
+            const fetchData = () => {
+                const url = 'https://api.thaistock2d.com/live';
 
-      // Make the fetch request
-      fetch(url)
-          .then(response => {
-              if (!response.ok) {
-                  throw new Error('Network response was not ok');
-              }
-              return response.json(); // Parse the response body as JSON
-          })
-          .then(data => {
-              // Handle the data from the response
-              console.log(data);
-              // live 2d winner for today
-              $("#live_2d").text(data.live.twod)
+                fetch(url)
+                    .then(response => {
+                        if (!response.ok) {
+                            throw new Error('Network response was not ok');
+                        }
+                        return response.json();
+                    })
+                    .then(data => {
+                        const updatedTime = new Date(data.live.time);
+                        const day = updatedTime.getDate().toString().padStart(2, '0');
+                        const month = (updatedTime.getMonth() + 1).toString().padStart(2, '0');
+                        const year = updatedTime.getFullYear();
+                        let hours = updatedTime.getHours();
+                        const minutes = updatedTime.getMinutes();
+                        const ampm = hours >= 12 ? 'PM' : 'AM';
+                        hours = hours % 12;
+                        hours = hours ? hours : 12;
+                        const updatedTimeFormat = `${day}-${month}-${year} ${hours}:${minutes.toString().padStart(2, '0')}:${updatedTime.getSeconds().toString().padStart(2, '0')}${ampm}`;
 
-              // updated time format code start
-              const updatedTime = new Date(data.live.time);
-              const day = updatedTime.getDate().toString().padStart(2, '0');
-              const month = (updatedTime.getMonth() + 1).toString().padStart(2, '0'); // Months are 0-based
-              const year = updatedTime.getFullYear();
-              let hours = updatedTime.getHours();
-              const minutes = updatedTime.getMinutes();
-              const ampm = hours >= 12 ? 'PM' : 'AM';
-              hours = hours % 12;
-              hours = hours ? hours : 12; // the hour '0' should be '12'
-              updatedTimeFormat = `${day}-${month}-${year} ${hours}:${minutes.toString().padStart(2, '0')}:${updatedTime.getSeconds().toString().padStart(2, '0')}${ampm}`
-              $("#live_updated_time").text(updatedTimeFormat)
-              // updated time format code end
+                        $("#live_2d").text(data.live.twod);
+                        $("#live_updated_time").text(updatedTimeFormat);
 
-              // result looping
-              let newHTML = ''
-              data.result.forEach(r => {
-                newHTML += `
-                    <div class="card digit-card mb-1"> 
-                      <p class="text-center">${r.open_time}</p>
-                      <div class="multi-text">                
-                        <div class="">
-                          <p>Set</p>
-                          <p>${r.set}</p>
-                        </div>
-                        <div class="">
-                          <p>Value</p>
-                          <p>${r.value}</p>
-                        </div>
-                        <div class="">
-                          <p>2D</p>
-                          <p>${r.twod}</p>
-                        </div>
-                      </div>             
-                  </div>
-                `;
-              })
-              $('#result').html(newHTML);
-              
-          })
-          .catch(error => {
-              // Handle errors
-              console.error('Error:', error);
-          });
+                        let newHTML = '';
+                        data.result.forEach(r => {
+                            newHTML += `
+                                <div class="card digit-card mb-1"> 
+                                  <p class="text-center">${r.open_time}</p>
+                                  <div class="multi-text">                
+                                    <div class="">
+                                      <p>Set</p>
+                                      <p>${r.set}</p>
+                                    </div>
+                                    <div class="">
+                                      <p>Value</p>
+                                      <p>${r.value}</p>
+                                    </div>
+                                    <div class="">
+                                      <p>2D</p>
+                                      <p>${r.twod}</p>
+                                    </div>
+                                  </div>             
+                              </div>
+                            `;
+                        });
+                        $('#result').html(newHTML);
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+            };
+
+            setInterval(fetchData, 1000);
+        })();
+
+
   </script>
   </body>
 </html>
