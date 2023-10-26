@@ -387,3 +387,18 @@ footer{
     color: #1aacac;
 }
 /* END REGISTER STYLES */
+
+/* START CHANGE PASSWORD STYLES */
+.pw-btn {
+    width: 340px;
+    height: 40px;
+    border-radius: 30px !important;
+    background: #1aacac;
+    color: white;
+    text-decoration: none;
+}
+.pw-btn:hover {
+    color: white;
+}
+/* END CHANGE PASSWORD STYLES */
+
