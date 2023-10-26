@@ -39,23 +39,23 @@
              <div class="col">
               <p>ငွေထုတ်မည့်ဘဏ်အကောင့်သတ်မှတ်ပါ</p>
               <div class="d-flex">
-               <div class="banks">
-                <img src="assets/img/bank/kpay.png" class="w-100" alt="">
+               <div class="banks blur-image">
+                <img src="assets/img/bank/kpay.png" onclick="showForm()" class="w-100" alt="">
                </div>
-               <div class="banks">
-                <img src="assets/img/bank/wpay.png" class="w-100" alt="">
+               <div class="banks blur-image">
+                <img src="assets/img/bank/wpay.png" onclick="showForm()" class="w-100" alt="">
                </div>
-               <div class="banks">
-                <img src="assets/img/bank/cbpay.png" class="w-100" alt="">
+               <div class="banks blur-image">
+                <img src="assets/img/bank/cbpay.png" onclick="showForm()" class="w-100" alt="">
                </div>
-               <div class="banks">
-                <img src="assets/img/bank/aya_logo.png" class="w-100" alt="">
+               <div class="banks blur-image">
+                <img src="assets/img/bank/aya_logo.png" onclick="showForm()" class="w-100" alt="">
                </div>
               </div>
              </div>              
             </div>
             <div class="row mt-3">
-             <div class="container m-2">
+             <div class="container m-2" id="withdraw-form" style="display: none;">
               <div class="form-group p-2">
                <label for="" class="form-label">သင့် KBZ Pay အကောင့်</label>
                <input type="text" class="form-control" name="" id="" placeholder="ငွေလက်ခံမည့် သင့်KBZ Pay အကောင့်သတ်မှတ်ပါ">
@@ -91,5 +91,24 @@
       integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
       crossorigin="anonymous"
     ></script>
+    <script>
+      function showForm() {
+        const blurImages = document.querySelectorAll('.blur-image');
+
+        blurImages.forEach((image) => {
+          image.addEventListener('click', function () {
+            // Remove the 'active' class from all images
+            blurImages.forEach((otherImage) => {
+              otherImage.classList.remove('active');
+            });
+            
+            // Add the 'active' class to the clicked image
+            this.classList.add('active');
+          });
+        });
+        let form = document.getElementById('withdraw-form');
+        form.style.display = 'block';
+      }
+    </script>
   </body>
 </html>

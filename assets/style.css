@@ -34,8 +34,16 @@
  /* padding: 15px 10px 10px 0px; */
 }
 .image-box img{
- border-radius: 20px;
+ border-radius: 20px; 
+}
+.blur-image {
+  opacity: 0.5; /* Apply reduced opacity by default */
  
+  cursor: pointer; /* Change cursor to a pointer to indicate clickability */
+}
+
+.blur-image.active {
+  opacity: 1; /* Full opacity for the clicked image */
 }
 
 .item-box a {
