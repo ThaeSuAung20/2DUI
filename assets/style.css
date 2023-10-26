@@ -10,6 +10,10 @@ footer a:hover {
  position: relative;
  /* padding-bottom: 20px; */
 }
+.bg-green{
+    background-color: #1aacac;
+    color: #fff;
+}
 
 .child-div {
  position: absolute;
@@ -402,3 +406,18 @@ footer{
 }
 /* END CHANGE PASSWORD STYLES */
 
+/* dashboard.html codes */
+.profile-icon{
+    font-size: 60px;
+}
+.shadow{
+    box-shadow: 1px 2px 3px #909090;
+}
+.twod-list{
+    color: coral;
+    font-size: 30px;
+}
+#refresh{
+    cursor: pointer;
+}
+/* dashboard.html codes */
