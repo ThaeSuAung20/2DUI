@@ -1,3 +1,11 @@
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+footer a:hover {
+    text-decoration: none;
+    color: #000;
+}
 .parent-div {
  position: relative;
  /* padding-bottom: 20px; */
