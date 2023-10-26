@@ -14,6 +14,9 @@ footer a:hover {
     background-color: #1aacac;
     color: #fff;
 }
+.text-green{
+    color: #1aacac;
+}
 
 .child-div {
  position: absolute;
@@ -419,5 +422,9 @@ footer{
 }
 #refresh{
     cursor: pointer;
+}
+.click{
+    background-color: #0088cc;
+    color: #fff;
 }
 /* dashboard.html codes */
