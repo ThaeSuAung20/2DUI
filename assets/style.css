@@ -437,12 +437,12 @@ footer{
 
 /* START TOU UP SUBMIT STYLES */
 .submit-btn {
-    width: 400px;
+    width:100%;
     height: 40px;
     border-radius: 30px ;
     background: #1aacac !important;
     color: white !important;
     text-decoration: none;
-    margin: 10px;
+    /* margin: 10px; */
 }
 /* END TOU UP SUBMIT STYLES */
