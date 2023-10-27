@@ -16,145 +16,171 @@
       href="https://cdn.jsdelivr.net/npm/material-icons@1.13.11/iconfont/material-icons.min.css"
     />
 
-    <!-- Bootstrap CSS -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-      crossorigin="anonymous"
-    />
+    <!-- Bootstrap CSS 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <title>Delight Project</title>
   </head>
   <body>  
-    <div class="container">
+      <!-- navbar section -->
+      <div class="container-fluid fixed-top">
         <div class="row">
-          <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4" style="position: relative;" id="main">            
-            <div class="row text-white sticky-top p-2" style="background: #1aacac; ">
-              <h5 class="mx-auto">Delight 2D | 3D</h5>             
+          <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 bg-green">            
+            <div class="px-3 py-3">
+              <div class="d-flex justify-content-between">
+                <div></div>
+                <h5 class="mx-auto">Delight 2D | 3D</h5> 
+                <span class="material-icons" id="refresh">refresh</span>
+              </div>
             </div>
+          </div>
+        </div>
+    </div>
+    <!-- navbar section -->
+
+    <div class="container-fluid mt-5 pt-3 pb-5 mb-5">
+      <!-- profile section -->
+      <div class="row mb-1">
+          <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 bg-green border broder-top-1 bg-green">
             <div class="row parent-div" style="background: #2e97a7;">
               <div class="col">
-                <div class="d-flex pt-4">
-                  <span
-                    class="material-icons"
-                    style="font-size: 70px; color: white">account_circle</span>
-                  <div class="mt-2 text-white">
-                    <p>User Name<br />+950912345678</p>
+                <div class="d-flex justify-content-between pt-3">
+                  <div class="d-flex">
+                    <i class="fa-regular fa-circle-user profile-icon d-block me-3"></i>
+                    <div class="mt-2 text-white">
+                      <p class="mb-0">Stephen Suu</p>
+                      <p>+95912345678</p>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="col my-auto" style="margin-left: 100px">
-                <div>
-                  <span
-                    class="material-icons"
-                    style="font-size: 30px; color: white">notifications</span>
+                  <div class="mt-3">
+                    <i class="fas fa-bell" style="font-size: 30px; color: white"></i>
+                  </div>
                 </div>
               </div>
               <div class="col-12">
-                <div class="card child-div">
-                  <div>
-                    <p class="text-danger">လက်ကျန်ငွေ (ကျပ်) <span class="material-icons text-primary">visibility</span><br>
-                    <span class="text-primary font-weight-bold">0.00</span></p>
-                  </div>                           
+                <div class="card child-div px-3 py-2">
+                  <div class="d-flex">
+                    <p class="text-danger me-2 pb-0 mb-0">လက်ကျန်ငွေ (ကျပ်)</p>
+                    <i class="fas fa-eye d-block mt-1 text-primary"></i>
+                  </div>
+                  <span class="text-primary font-weight-bold d-block">0.00</span>
                 </div> 
-              </div>
-                                        
-            </div>                     
-            <div class="row" style="margin-top: 30px;">
-              <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                  <div class="carousel-item active">
-                      <img src="assets/img/banners/lotto1.png" style="max-height: 500px;" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/banners/lotto2.png" style="max-height: 500px;" class="d-block w-100" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="assets/img/banners/lotto3.png" style="max-height: 500px;" class="d-block w-100" alt="...">
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row mt-2 p-3">
-              <div class="col-6">
-                <div class="item-box"><h4><a href="twod.html">2D PLAY</a></h4></div>
-                <a href="twod.html" style="text-decoration: none;"><p class="item-text font-weight-bold">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="item-box"><h4><a href="">3D PLAY</a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text font-weight-bold">3D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-              <div class="col-6">
-                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
-                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
-              </div>
-            </div>
-            <footer class="py-3 bg-white">
-              <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4">
-                <div class="d-flex justify-content-around">
-                  <div class="text-center">
-                    <a href="index.html" class="text-decoration-none footer-nav">
-                      <i class="fas fa-house-chimney d-block text-secondary footer-icon"></i>
-                      <span class="d-block footer-text">ပင်မ</span>
-                    </a>
-                  </div>
-                  <div class="text-center">
-                    <a href="wallet.html" class="text-decoration-none footer-nav">
-                      <i class="fas fa-wallet d-block text-secondary footer-icon"></i>
-                      <span class="d-block footer-text">ပိုက်ဆံအိတ်</span>
-                    </a>
-                  </div>
-                  <div class="text-center">
-                    <a href="promotion.html" class="text-decoration-none footer-nav">
-                      <i class="fas fa-gift d-block text-secondary footer-icon"></i>
-                      <span class="d-block footer-text">ပရိုမိုရှင်း</span>
-                    </a>
-                  </div>
-                  <div class="text-center">
-                    <a href="service.html" class="text-decoration-none footer-nav">
-                      <i class="fas fa-phone d-block text-secondary footer-icon"></i>
-                      <span class="d-block footer-text">ဝန်ဆောင်မှုဖုန်း</span>
-                    </a>
-                  </div>
-                  <div class="text-center">
-                    <a href="./dashboard.html" class="text-decoration-none footer-nav">
-                      <i class="fas fa-user d-block text-secondary footer-icon"></i>
-                      <span class="d-block footer-text">ကျွန်ုပ်</span>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-            </footer>
-            <!-- <div class="row">
-              <div class="col fixed-bottom" >
-                <div class="bg-primary">Fixed bottom</div>
-              </div>
-              
-            </div> -->
+              </div>                      
+            </div> 
           </div>
+      </div>
+      <!-- profile section -->
+      <div class="row">
+        <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4">
+          <div class="row justify-content-around" style="margin-top: 30px;">
+            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="assets/img/banners/lotto1.png" style="max-height: 500px;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/banners/lotto2.png" style="max-height: 500px;" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="assets/img/banners/lotto3.png" style="max-height: 500px;" class="d-block w-100" alt="...">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="my-3">
+            <div class="d-flex justify-content-around">
+              <div class="">
+                <div class="item-box"><h4><a href="twod.html">2D PLAY</a></h4></div>
+                <a href="twod.html" style="text-decoration: none;">
+                  <p class="item-text font-weight-bold">2D</p>
+                </a>
+              </div>
+              <div class="">
+                <div class="item-box"><h4><a href="">3D PLAY</a></h4></div>
+                <a href="" style="text-decoration: none;">
+                  <p class="item-text font-weight-bold">3D</p>
+                </a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around">
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around">
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around">
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+            </div>
+            <div class="d-flex justify-content-around">
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+              <div class="">
+                <div class="image-box"><h4><a href=""><img class="w-100" src="assets/img/logo/logo1.jpg" alt=""></a></h4></div>
+                <a href="" style="text-decoration: none;"><p class="item-text">2D</p></a>
+              </div>
+            </div>
+          </div>
+          <footer class="row">
+            <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 bg-light pt-4 pb-3">
+              <div class="d-flex justify-content-around">
+                <div class="text-center">
+                  <a href="index.html" class="text-decoration-none footer-nav">
+                    <i class="fas fa-house-chimney d-block text-secondary footer-icon"></i>
+                    <span class="d-block footer-text">ပင်မ</span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="wallet.html" class="text-decoration-none footer-nav">
+                    <i class="fas fa-wallet d-block text-secondary footer-icon"></i>
+                    <span class="d-block footer-text">ပိုက်ဆံအိတ်</span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="promotion.html" class="text-decoration-none footer-nav">
+                    <i class="fas fa-gift d-block text-secondary footer-icon"></i>
+                    <span class="d-block footer-text">ပရိုမိုရှင်း</span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="service.html" class="text-decoration-none footer-nav">
+                    <i class="fas fa-phone d-block text-secondary footer-icon"></i>
+                    <span class="d-block footer-text">ဝန်ဆောင်မှုဖုန်း</span>
+                  </a>
+                </div>
+                <div class="text-center">
+                  <a href="./dashboard.html" class="text-decoration-none footer-nav">
+                    <i class="fas fa-user d-block text-secondary footer-icon"></i>
+                    <span class="d-block footer-text">ကျွန်ုပ်</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </footer>
         </div>
       </div>
+    </div>
 
     
 
@@ -166,15 +192,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
   </body>
 </html>
