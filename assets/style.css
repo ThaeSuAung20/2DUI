@@ -115,11 +115,32 @@
  position: fixed;
  background: white;
 } */
+.fixed-card{
+    color: #ab0000 ;
+}
 .event-card {
+<<<<<<< HEAD
   color: #1aacac;
   border: 1px solid #000;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+=======
+    border: 1px solid #000;
+    border-radius: 30px;
+    box-shadow: rgb(255, 0, 0) 0px 5px 15px;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #131313;
+}
+
+.event-card a{
+    text-decoration: none;
+    color: #ab0000 ;
+}
+.event-card a:hover{
+    text-decoration: none;
+    color: #ab0000 ;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 }
 
 .event-card span {
@@ -127,6 +148,7 @@
 }
 
 .digit-twod {
+<<<<<<< HEAD
   font-size: 100px;
   font-weight: 4em;
   text-align: center !important;
@@ -140,6 +162,21 @@
   color: white;
   text-align: center;
   padding: 10px;
+=======
+ font-size: 100px;
+ font-weight: 4em;
+ text-align: center !important;
+ align-items: center;
+ color: #ab0000;
+}
+
+.digit-card {
+ width: 100%;
+ background-color: #ab0000 !important;
+ color: white;
+ text-align: center;
+ padding: 10px;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 }
 
 hr {
@@ -151,8 +188,11 @@ hr {
   justify-content: space-between;
   align-items: center;
 }
-
+#main-body{
+    position: relative;
+}
 .fixed-footer {
+<<<<<<< HEAD
   position: fixed;
   bottom: 0;
   z-index: 100;
@@ -173,9 +213,35 @@ hr {
   background: #1aacac;
   color: white;
   margin-left: 115px;
+=======
+ position: fixed;
+ bottom: 0;
+ z-index: 100;
+ padding: 10px;
+ margin: auto;
+}
+
+/* .fixed-footer a:hover {
+ color: white;
+} */
+
+.custom-btn {
+ width: 100%;
+ display: block;
+ height: 40px;
+ padding: 20px;
+ /* background: #ab0000; */
+ border: 1px solid #ab0000;
+ color: #ab0000;
+ margin-left: 115px;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
+}
+.custom-btn:hover{
+    box-shadow: 2px 3px 4px #ab0000;
 }
 
 .modal-btn {
+<<<<<<< HEAD
   width: 100%;
   height: 40px;
   text-align: center;
@@ -204,6 +270,36 @@ hr {
   border-radius: 10px;
   background: #1aacac;
   color: #fff;
+=======
+ width: 100%;
+ height: 40px;
+ text-align: center;
+ margin: 5px;
+ padding: 5px;
+ border: 2px solid #ab0000;
+ border-radius: 10px;
+ background: white;
+ color: #ab0000;
+}
+.modal-btn a {
+ color: #ab0000;
+}
+.modal-btn a:hover {
+ text-decoration: none;
+ color: #ab0000;
+}
+
+.modal-btn1 {
+ width: 100%;
+ height: 40px;
+ text-align: center;
+ margin: 5px;
+ padding: 5px;
+ border: 2px solid #ab0000;
+ border-radius: 10px;
+ background: #ab0000;
+ color: #fff;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 }
 /* END TWOD STYLES */
 
@@ -366,6 +462,7 @@ footer {
 
 /* START WINNER PAGE STYLES */
 .winner-card {
+<<<<<<< HEAD
   width: 100%;
   height: 50px;
   text-align: center;
@@ -377,12 +474,26 @@ footer {
   background: -webkit-linear-gradient(to right, #267871, #136a8a);
   background: linear-gradient(to right, #267871, #136a8a);
   color: white;
+=======
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    border-radius: 5px;
+    background: #ab0000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #267871, #ab0000);  
+    background: linear-gradient(to right, #ab0000, #ab0000);
+    color: white;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 }
 
 .winner-table {
   width: 100%;
 }
 
+<<<<<<< HEAD
 .winner-table td {
   padding: 13px 4px 4px 4px;
 }
@@ -394,14 +505,32 @@ footer {
 .winner-table tr {
   margin-top: 3px;
   margin-bottom: 3px;
+=======
+/* .winner-table td{
+    padding: 13px 4px 4px 4px;
+} */
+/* .winner-table span {
+    font-size: 15px;
+    font-weight: bold;
+} */
+
+/* .winner-table tr {
+    margin-top: 3px;
+    margin-bottom: 3px;
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 }
 .winner-table tr:nth-child(even) {
   background-color: white;
 }
 
 .winner-table tr:nth-child(odd) {
+<<<<<<< HEAD
   background-color: #1aacac;
 }
+=======
+    background-color: #1aacac; 
+} */
+>>>>>>> beb4622e42298c882c02cb7492208e774b6bc448
 /* END WINNER PAGE STYLES */
 
 /* START LOGIN STYLES */
