@@ -53,19 +53,31 @@ footer a:hover {
  background: rgb(121,0,0);
  background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(214,0,0,1) 52%, rgba(255,0,0,1) 100%);
  color: white;
+ position: relative;
 }
 .item-box:hover{
     box-shadow: 2px 3px 4px #ff0202;
+}
+.frameBox{
+    position: absolute;
+    width: 55px;
+    top: 0;
+    right: 0;
 }
 
 .image-box {
  width: 150px;
  height: 60px;
- margin-bottom: 10px;
+ margin-bottom: 15px;
  /* padding: 15px 10px 10px 0px; */
 }
 .image-box img{
- border-radius: 20px; 
+ border-radius: 10px; 
+ box-shadow: 2px 3px 4px rgb(255, 0, 0);
+}
+.image-box img:hover{
+    transform: scale(1.1);
+    transition-duration: .6s;
 }
 .blur-image {
   opacity: 0.5; /* Apply reduced opacity by default */
