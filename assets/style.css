@@ -1,17 +1,26 @@
-footer a {
+@import url('https://fonts.cdnfonts.com/css/source-sans-pro');
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+#main-body{
+    background-color: #fdd9d9;
+}
+/* footer a {
     text-decoration: none;
     color: #000;
 }
 footer a:hover {
     text-decoration: none;
     color: #000;
-}
+} */
 .parent-div {
  position: relative;
+ border-radius: 10px;
  /* padding-bottom: 20px; */
 }
 .bg-green{
-    background-color: #1aacac;
+    /* background-color: #1aacac; */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,9,1) 50%, rgba(255,0,0,1) 100%);
     color: #fff;
 }
 .text-green{
@@ -38,14 +47,17 @@ footer a:hover {
  width: 150px;
  height: 60px;
  padding: 15px 10px 5px 0px;
- border-radius: 20px;
+ border-radius: 15px;
  align-items: center;
  text-align: center;
- background: #136a8a;  /* fallback for old browsers */
- background: -webkit-linear-gradient(to right, #267871, #136a8a);  
- background: linear-gradient(to right, #267871, #136a8a);
+ background: rgb(121,0,0);
+ background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(214,0,0,1) 52%, rgba(255,0,0,1) 100%);
  color: white;
 }
+.item-box:hover{
+    box-shadow: 2px 3px 4px #ff0202;
+}
+
 .image-box {
  width: 150px;
  height: 60px;
@@ -254,16 +266,28 @@ hr.my-custom-line {
  text-decoration: none;
  color: white;
 }
+.footer{
+    /* border: 1px solid red; */
+    border-radius: 10px 10px 0 0;
+    background: rgb(121,0,0);
+    background: linear-gradient(90deg, rgba(121,0,0,1) 0%, rgba(214,0,0,1) 52%, rgba(255,0,0,1) 100%);
+    color: white;
+    box-shadow: 1px 1px 6px black;
+}
 .footer-icon{
     font-size: 25px;
     margin-bottom: 5px;
+    color: #fff;
 }
 .footer-text{
     font-size: 12px;
-    color: #000;
+    color: #fff;
 }
-.footer-nav:hover{
-    text-decoration: none;
+.footer-nav i:hover{
+    /* text-decoration: none; */
+    font-size: 30px;
+    /* transform: scale(1.2); */
+    transition-duration: .6s;
 }
 #main{
     position: relative;
@@ -418,6 +442,7 @@ footer{
 /* dashboard.html codes */
 .profile-icon{
     font-size: 60px;
+    color: #fff;
 }
 .shadow{
     box-shadow: 1px 2px 3px #909090;
@@ -446,3 +471,6 @@ footer{
     /* margin: 10px; */
 }
 /* END TOU UP SUBMIT STYLES */
+#top-nav{
+    border-radius: 0 0 10px 10px;
+}
