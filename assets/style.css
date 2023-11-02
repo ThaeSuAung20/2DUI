@@ -375,9 +375,9 @@ footer{
     padding: 10px;
     margin-top: 20px;
     border-radius: 5px;
-    background: #136a8a;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #267871, #136a8a);  
-    background: linear-gradient(to right, #267871, #136a8a);
+    background: #ab0000;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #267871, #ab0000);  
+    background: linear-gradient(to right, #ab0000, #ab0000);
     color: white;
 }
 
@@ -385,15 +385,15 @@ footer{
     width: 100%;
 }
 
-.winner-table td{
+/* .winner-table td{
     padding: 13px 4px 4px 4px;
-}
-.winner-table span {
+} */
+/* .winner-table span {
     font-size: 15px;
     font-weight: bold;
-}
+} */
 
-.winner-table tr {
+/* .winner-table tr {
     margin-top: 3px;
     margin-bottom: 3px;
 }
@@ -403,7 +403,7 @@ footer{
 
 .winner-table tr:nth-child(odd) {
     background-color: #1aacac; 
-}
+} */
 /* END WINNER PAGE STYLES */
 
 /* START LOGIN STYLES */
