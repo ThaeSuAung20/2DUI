@@ -28,63 +28,86 @@
     <title>Delight Project</title>
   </head>
   <body>  
-    <div class="container">
-        <div class="row">
-          <div class="col-lg-4 col-md-4 col-sm-4 mx-auto" style="position: relative;padding-bottom: 200px;">            
-            <div class="row text-white sticky-top p-2" style="background: #1aacac; ">
-              <a href="index.html" style="color: white;"><span class="material-icons">arrow_back</span></a>
-              <h5 class="mx-auto">Delight 2D | 3D</h5>  
-              <span class="material-icons">refresh</span>           
+    <div class="container-fluid" style="margin-top:60px;">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 pt-2" id="main-body">
+          <!-- navbar section -->
+            <div class="container-fluid fixed-top" >
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 bg-green shadow" id="top-nav">            
+                    <div class="px-3 py-3">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <a href="index.html" style="color: white;"><span class="material-icons">arrow_back</span></a>
+                        </div>
+                        <h5 class="mx-auto">Delight 2D | 3D</h5> 
+                        <span class="material-icons" id="refresh">refresh</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
+          <!-- navbar section -->
+          <!-- remain balance section -->
             <div class="fixed-card">
-             <div class="row mt-2" style="color: #1aacac;">
-             <div class="col">
-              <div class="d-flex">
-               <span class="material-icons" style="font-size: 40px;">account_balance_wallet</span>
-               <p class="mt-2 px-2">လက်ကျန်ငွေ</p>              
+              <div class="row mt-2">
+                <div class="col">
+                <div class="d-flex">
+                  <span class="material-icons" style="font-size: 40px;">account_balance_wallet</span>
+                  <p class="mt-2 px-2">လက်ကျန်ငွေ</p>              
+                </div>
+                <p>0.00 Kyat</p>
+                </div>                                   
               </div>
-              <p>0.00 Kyat</p>
-             </div>                                   
+              <!-- event-card -->
+              <div class="card event-card">
+                <div class="d-flex p-1 justify-content-around">
+                <div>
+                  <a href="">
+                    <span class="material-icons">manage_search</span>
+                    <p>မှတ်တမ်း</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="winner_page.html">
+                    <span class="material-icons">stars</span>
+                    <p>ကံထူးရှင်များ</p>
+                  </a>
+                </div>
+                <div>
+                  <a href="">
+                    <span class="material-icons">event_note</span>
+                    <p>ပိတ်ရက်</p>
+                  </a>
+                </div>               
+                </div>
+              </div> 
+              <!-- event card -->
             </div>
-            <div class="card event-card">
-              <div class="d-flex p-1 justify-content-around">
-               <div>
-                <span class="material-icons">manage_search</span><p>မှတ်တမ်း</p>
-               </div>
-               <div>
-                <a href="winner_page.html" style="text-decoration: none;color: #1aacac ;"><span class="material-icons">stars</span><p>ကံထူးရှင်များ</p></a>
-               </div>
-               <div>
-                <span class="material-icons">event_note</span><p>ပိတ်ရက်</p>
-               </div>               
-              </div>
-             </div> 
-            </div>
-            <div class="row bg-light">
-             <div class="mx-auto">
+          <!-- remain balance section -->
+          <!-- winner result -->
+            <div class="row">
+              <div class="mx-auto">
               <h1 class="digit-twod" id="live_2d">07</h1>
-              <p style="color: #1aacac;">Updated: <span id="live_updated_time">10-0-2023 4:30:00PM</span></p>                             
-             </div>                         
+              <p style="color: #ab0000;">Updated: <span id="live_updated_time">10-0-2023 4:30:00PM</span></p>                             
+              </div>                         
             </div>    
-            <div class="container-fluid" id="result"></div>
-
-             <div class="row mt-3 fixed-footer">
+            <div class="container-fluid" style="margin-bottom:80px;" id="result"></div>
+            <div class="row fixed-footer">
               <div class="col mx-auto">
-               <button type="button" class="btn custom-btn" data-toggle="modal" data-target="#playtwod">ထိုးမည်</a>
+                <button type="button" class="btn custom-btn" data-toggle="modal" data-target="#playtwod">ထိုးမည်</a>
               </div>              
-             </div>      
-          </div>
-        </div>
+            </div> 
+          <!-- winner result -->           
       </div>
+    </div>  
 
 <!-- Modal -->
 <div class="modal fade" id="playtwod" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered" role="document">
-   <div class="row">
-    <div class="col-lg-12">
-     <div class="modal-content">
+    <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" style="color: #1aacac;" id="exampleModalLongTitle">ထိုးမည့်အချိန် (section) ကိုရွေးပါ</h5>
+        <h5 class="modal-title" style="color: #ab0000;" id="exampleModalLongTitle">ထိုးမည့်အချိန် (section) ကိုရွေးပါ</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -101,9 +124,6 @@
         <button type="button" class="btn modal-btn1">ထိုးမည်</button>
       </div>
     </div>
-    </div>
-   </div>
-    
   </div>
 </div>
 

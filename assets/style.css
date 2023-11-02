@@ -105,11 +105,25 @@
  position: fixed;
  background: white;
 } */
+.fixed-card{
+    color: #ab0000 ;
+}
 .event-card {
- color: #1aacac ;
- border: 1px solid #000;
- border-radius: 30px;
- box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 1px solid #000;
+    border-radius: 30px;
+    box-shadow: rgb(255, 0, 0) 0px 5px 15px;
+    text-align: center;
+    padding: 15px 0;
+    background-color: #131313;
+}
+
+.event-card a{
+    text-decoration: none;
+    color: #ab0000 ;
+}
+.event-card a:hover{
+    text-decoration: none;
+    color: #ab0000 ;
 }
 
 .event-card span{
@@ -121,12 +135,12 @@
  font-weight: 4em;
  text-align: center !important;
  align-items: center;
- color: #1aacac;
+ color: #ab0000;
 }
 
 .digit-card {
  width: 100%;
- background-color: #2e97a7 !important;
+ background-color: #ab0000 !important;
  color: white;
  text-align: center;
  padding: 10px;
@@ -141,29 +155,33 @@ hr {
  justify-content: space-between;
  align-items: center;
 }
-
+#main-body{
+    position: relative;
+}
 .fixed-footer {
  position: fixed;
  bottom: 0;
  z-index: 100;
- background: white;
- width: 100%;
  padding: 10px;
- /* margin-top: 500px; */
+ margin: auto;
 }
 
-.fixed-footer a:hover {
+/* .fixed-footer a:hover {
  color: white;
-}
-
+} */
 
 .custom-btn {
- width: 120px;
+ width: 100%;
+ display: block;
  height: 40px;
  padding: 20px;
- background: #1aacac;
- color: white;
+ /* background: #ab0000; */
+ border: 1px solid #ab0000;
+ color: #ab0000;
  margin-left: 115px;
+}
+.custom-btn:hover{
+    box-shadow: 2px 3px 4px #ab0000;
 }
 
 .modal-btn {
@@ -172,17 +190,17 @@ hr {
  text-align: center;
  margin: 5px;
  padding: 5px;
- border: 2px solid #1aacac;
+ border: 2px solid #ab0000;
  border-radius: 10px;
  background: white;
- color: #2e97a7;
+ color: #ab0000;
 }
 .modal-btn a {
- color: #2e97a7;
+ color: #ab0000;
 }
 .modal-btn a:hover {
  text-decoration: none;
- color: #2e97a7;
+ color: #ab0000;
 }
 
 .modal-btn1 {
@@ -191,9 +209,9 @@ hr {
  text-align: center;
  margin: 5px;
  padding: 5px;
- border: 2px solid #1aacac;
+ border: 2px solid #ab0000;
  border-radius: 10px;
- background: #1aacac;
+ background: #ab0000;
  color: #fff;
 }
 /* END TWOD STYLES */
