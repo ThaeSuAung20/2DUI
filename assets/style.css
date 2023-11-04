@@ -123,7 +123,7 @@
   border-radius: 30px;
   box-shadow: rgb(255, 0, 0) 0px 5px 15px;
   text-align: center;
-  padding: 15px 0;
+  padding: 5px 0;
   background-color: #131313;
 }
 
@@ -137,7 +137,7 @@
 }
 
 .event-card span {
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .digit-twod {
@@ -533,3 +533,53 @@ footer {
 #top-nav {
   border-radius: 0 0 10px 10px;
 }
+
+/* start threed styles */
+.threed-card {
+  width: 100%;
+  height: 60px;
+  background: #ab0000;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  padding: 2px 15px 0 15px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px 2px#9e190d;
+  margin-bottom: 15px;
+}
+/* end threed styles */
+
+/* start threed play styles */
+.threeplay-footer {
+  position: fixed;
+  bottom: 0;
+  /* left: 20;
+  right: 30; */
+  display: flex;
+  justify-content: space-between;
+  z-index: 100; /* You can set the z-index if needed */
+  padding: 10px;
+  margin: 10px;
+}
+
+.threeplay-btn {
+  width: 100%;
+  height: 40px;
+  padding: 50px 20px;
+  background: #ab0000;
+  border: 1px solid #ab0000;
+  color: #fff !important;
+}
+
+.removeplay-btn {
+  width: 100%;
+  height: 40px;
+  padding: 50px 20px;
+  border: 1px solid #ab0000 !important;
+  color: #ab0000 !important;
+}
+/* end threed play styles */
+
+/* start threed confirm styles */
+/*  */
+/* end threed confirm styles */
