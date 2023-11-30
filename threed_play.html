@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/style.css">
+
+    <!-- material icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/material-icons@1.13.11/iconfont/material-icons.min.css"
+    />
+
+    <script src="https://kit.fontawesome.com/b829c5162c.js" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+     <style>
+        #output {
+          display: flex;
+        }
+        .output {
+            border: 1px solid #ab0000;
+            border-radius: 3px;
+            background: #ab0000;
+            color: #fff;
+            padding: 10px;
+            margin: 10px 5px 5px 5px;
+        }
+    </style>
+    <title>Delight Project</title>
+  </head>
+  <body>  
+    <div class="container-fluid" style="margin-top:60px;">
+      <div class="row">
+        <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 pt-2" id="main-body">
+          <!-- navbar section -->
+            <div class="container-fluid fixed-top" >
+                <div class="row">
+                  <div class="col-lg-4 col-md-4 offset-lg-4 offset-md-4 bg-green shadow" id="top-nav">            
+                    <div class="px-3 py-3">
+                      <div class="d-flex justify-content-between">
+                        <div>
+                          <a href="threed.html" style="color: white;"><span class="material-icons">arrow_back</span></a>
+                        </div>
+                        <h5 class="mx-auto">Delight 2D | 3D</h5> 
+                        <span class="material-icons" id="refresh">refresh</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </div>
+          <!-- navbar section -->
+          <!-- remain balance section -->
+            <div class="fixed-card">
+              <div class="row mt-2">
+                <div class="col d-flex justify-content-between">
+                 <div>
+                   <div class="d-flex">
+                     <span class="material-icons" style="font-size: 40px;">account_balance_wallet</span>
+                     <p class="mt-2 px-2">လက်ကျန်ငွေ</p> 
+                   </div>
+                   <p>0.00 Kyat</p>
+                 </div>
+                 <div class="text-center">
+                  <i class="fa-solid fa-clock mt-1" style="font-size: 28px;"></i><span>ပိတ်ရန်ကျန်ချိန်</span>
+                  <p>2023-11-16 <br><span>02:30:00PM</span></p>                  
+                 </div> 
+                </div>                                   
+              </div>              
+            </div>
+          <!-- remain balance section -->
+
+          <!-- play section -->
+          <div style="height: 100vh;"> 
+           <div class="form-group">
+            <input type="number" class="form-control" style="height: 50px;" placeholder="ငွေပမာဏ အနည်းဆုံး (၁၀၀)ကျပ်" name="" id="">
+           </div>
+           <div class="form-group">
+            <input type="number" class="form-control" style="height: 50px;" placeholder="စာရိုက်ပြီး ဂဏန်းရွေးမည်" name="" id="additionalInput">
+           </div>
+          <h6 class="text-center mb-2" style="color: red;">ဂဏန်းရွေးမည်</h6>
+           <div class="container"> 
+            <div class="row">
+              <div class="col-4">
+                <div class="form-group">
+                  <input type="number" class="form-control threed-digit" placeholder="ရှေ့"  min="0" max="9">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <input type="number" class="form-control threed-digit" placeholder="လယ်"  min="0" max="9">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="form-group">
+                  <input type="number" class="form-control threed-digit" placeholder="နောက်"  min="0" max="9">
+                </div>
+              </div>
+            </div> 
+            <div class="mx-auto">
+               <a type="button" onclick="chooseNumber()" class="btn threeplay-btn">ရွေးမည်</a>
+            </div>
+            <div class="container">
+              <div id="output"></div>
+              <!-- <div class="row">
+                  <div class="col-3">
+                      
+                  </div>
+              </div> -->
+            </div>
+           </div>
+          </div>
+          <!-- play section -->
+
+          <!-- winner result -->
+          <div class="row threeplay-footer" style="margin-left: 80px;">
+            <div class="col-6 mx-auto">
+              <a type="button" onclick="removeNumber()" class="btn removeplay-btn">ဖျက်မည်</a>
+            </div>         
+            <div class="col-6 mx-auto">
+               <a href="threed-confirm.html" class="btn threeplay-btn">ထိုးမည်</a>
+            </div>   
+          </div>
+            
+          <!-- winner result -->           
+      </div>
+    </div>  
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      function chooseNumber() {
+        const inputs = document.querySelectorAll('.threed-digit');
+        const additionalInput = document.getElementById('additionalInput');
+        const output = document.getElementById('output');
+        const additionalValue = additionalInput.value;
+        const values = Array.from(inputs).map(input => input.value);
+
+            if (additionalValue) {
+                const result = document.createElement('div');
+                result.classList.add('output');
+                result.textContent = `${additionalValue}`;
+                output.appendChild(result);
+            } else {
+                const result = document.createElement('div');
+                result.classList.add('output');
+                result.textContent = `${values.join('')}`;
+                output.appendChild(result);
+            }
+            inputs.forEach(input => input.value = '');
+            additionalInput.value = '';
+
+      }
+
+      function removeNumber() {
+            const output = document.getElementById('output');
+            while (output.firstChild) {
+                output.removeChild(output.firstChild);
+            }
+        }
+
+        
+    </script>
+   
+  </body>
+</html>
